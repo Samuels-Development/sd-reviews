@@ -19,7 +19,7 @@ Store: [Click Here](https://fivem.samueldev.shop)
 ## 📖 Dependencies
 - qb-core, qbx_core or es_extended.
 - [oxymsql](https://github.com/overextended/oxmysql)
-- [ox_libs](https://github.com/overextended/ox_lib)
+- [ox_lib](https://github.com/overextended/ox_lib)
 - [sd_lib](https://github.com/Samuels-Development/sd_lib/releases)
 
 ## 📖 Usage
