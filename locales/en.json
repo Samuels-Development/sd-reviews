@@ -1,0 +1,41 @@
+{
+  "notifications": {
+    "invalid_rating": "Invalid star rating.",
+    "business_not_found": "Business not found.",
+    "coords_not_found": "Could not determine your location.",
+    "too_far": "You are too far from the business to submit a review.",
+    "review_submitted_success": "Your review for '{businessName}' was submitted!",
+    "review_submitted_fail": "Failed to submit your review. Please try again later."
+  },
+  "context_menu": {
+    "open_reviews_title": "Reviews",
+    "open_reviews_description": "Curious about others’ experiences? View existing impressions or share your own insights.",
+    "reviews_header": "Feedback for {businessName}",
+    "reviews_title": "What do people say about {businessName}?",
+"rating_placeholder_count": "Average Rating: {rating}/5.0 ⭐️ — {count} Review(s)",
+    "read_reviews_title": "Browse Reviews",
+    "read_reviews_description": "Check out detailed opinions from fellow patrons to see what they liked—or didn’t.",
+    "read_reviews_notification": "Collecting all available reviews...",
+    "write_review_title": "Write a Review",
+    "write_review_description": "Have something to say? Leave your thoughts and a rating here!",
+    "write_review_notification": "Processing your feedback, please wait...",
+    "review_star_rating_label": "Star Rating",
+    "review_text_label": "Comment",
+    "review_text_placeholder": "Share up to 120 characters (optional). Keep it short!",
+    "review_anonymous_label": "Submit Anonymously?",
+    "review_submit_description": "Submitted Review:\nBusiness: %s\nStars: %s\nAnonymous: %s\nMessage: %s",
+    "review_no_comment": "(No comment)",
+    "review_yes": "Yes",
+    "review_no": "No",
+    "no_rating_yet": "No reviews yet—no rating available!",
+    "no_reviews_found_title": "No Reviews Found",
+    "no_reviews_found_description": "Looks like no one has shared their thoughts yet. Be the first to leave a review!",
+    "return_main_menu_title": "Return to Main Menu",
+    "return_main_menu_description": "Go back to the main reviews menu to see other options.",
+    "already_submitted_review_title": "Review Already Submitted",
+    "already_submitted_review_description": "You've already reviewed this business. You cannot submit another review right now."
+  },
+  "target": {
+    "open_reviews_title": "Open Reviews"
+  }
+}
