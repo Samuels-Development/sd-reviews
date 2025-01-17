@@ -11,7 +11,7 @@ SD.Locale.LoadLocale('en') -- Load the locale language, if available. You can ch
 Config.Businesses = {
     [1] = {
         name = "Bean Machine",
-        coords = vector3(-1222.77, -907.19, 12.33),
+        coords = vector3(-627.20, 239.04, 82.07),
         radius = 2.0,
         debug = false
     }
