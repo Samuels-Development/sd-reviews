@@ -2,10 +2,7 @@
 
 `sd-reviews` is a comprehensive and flexible reviews script for FiveM, allowing you to store, manage, and display user-submitted reviews for any business or location within your server.
 
-https://i.imgur.com/vhqsVqP.jpeg
-https://i.imgur.com/GWaPXXH.jpeg
-https://i.imgur.com/iAwX9N1.jpeg
-https://i.imgur.com/0obMxCF.jpeg
+
 
 ## 🔔 Contact
 
