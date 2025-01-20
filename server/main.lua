@@ -178,4 +178,4 @@ SD.Callback.Register('sd-reviews:server:hasPlayerReviewedBusiness', function(sou
     return { hasReview = false }
 end)
 
-SD.CheckVersion('sd-versions/sd-reviews') -- Check version of specified resource
+SD.CheckVersion('Samuels-Development/sd-reviews') -- Check version of specified resource
