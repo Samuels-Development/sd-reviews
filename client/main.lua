@@ -47,9 +47,11 @@ local SubmitReview = function(businessName)
 end
 
 --- Function to retrieve reviews for a given business from the server.
---- Displays them in a new context menu. If no reviews are found, shows a context menu with a message.
+--- Displays them in a new context menu with pagination.
 --- @param businessName string The business name to fetch reviews for.
-ShowBusinessReviews = function(businessName)
+--- @param currentPage number The current page to display (optional, default is 1).
+ShowBusinessReviews = function(businessName, currentPage)
+    currentPage = currentPage or 1
     SD.Callback('sd-reviews:server:getReviewsForBusiness', false, function(data)
         local options = {}
 
@@ -62,7 +64,7 @@ ShowBusinessReviews = function(businessName)
             }
 
             options[#options + 1] = {
-                title = locale('context_menu.return_main_menu_title'), 
+                title = locale('context_menu.return_main_menu_title'),
                 icon = 'fas fa-arrow-left',
                 description = locale('context_menu.return_main_menu_description'),
                 onSelect = function()
@@ -80,7 +82,11 @@ ShowBusinessReviews = function(businessName)
             return
         end
 
-        for _, review in ipairs(data) do
+        local startIdx = (currentPage - 1) * 6 + 1
+        local endIdx = math.min(startIdx + 6 - 1, #data)
+
+        for i = startIdx, endIdx do
+            local review = data[i]
             local rating = review.Rating or 0
             local author = review.AuthorName or "Anonymous"
             local text = review.ReviewText ~= "" and review.ReviewText or locale('context_menu.review_no_comment')
@@ -92,8 +98,30 @@ ShowBusinessReviews = function(businessName)
             }
         end
 
+        if currentPage > 1 then
+            options[#options + 1] = {
+                title = locale('context_menu.previous_page_title') or "Previous Page",
+                icon = 'fas fa-arrow-left',
+                description = locale('context_menu.previous_page_description') or "",
+                onSelect = function()
+                    ShowBusinessReviews(businessName, currentPage - 1)
+                end
+            }
+        end
+
+        if endIdx < #data then
+            options[#options + 1] = {
+                title = locale('context_menu.next_page_title') or "Next Page",
+                icon = 'fas fa-arrow-right',
+                description = locale('context_menu.next_page_description') or "",
+                onSelect = function()
+                    ShowBusinessReviews(businessName, currentPage + 1)
+                end
+            }
+        end
+
         options[#options + 1] = {
-            title = locale('context_menu.return_main_menu_title'), 
+            title = locale('context_menu.return_main_menu_title'),
             icon = 'fas fa-arrow-left',
             description = locale('context_menu.return_main_menu_description'),
             onSelect = function()

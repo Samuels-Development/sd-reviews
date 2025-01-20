@@ -33,7 +33,11 @@
     "return_main_menu_title": "Return to Main Menu",
     "return_main_menu_description": "Go back to the main reviews menu to see other options.",
     "already_submitted_review_title": "Review Already Submitted",
-    "already_submitted_review_description": "You've already reviewed this business. You cannot submit another review right now."
+    "already_submitted_review_description": "You've already reviewed this business. You cannot submit another review right now.",
+    "previous_page_title": "Previous Page",
+    "previous_page_description": "Go to the previous set of reviews.",
+    "next_page_title": "Next Page",
+    "next_page_description": "Go to the next set of reviews."
   },
   "target": {
     "open_reviews_title": "Open Reviews"
